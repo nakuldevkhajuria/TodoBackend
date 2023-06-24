@@ -2,9 +2,9 @@ const express = require("express");
 const dbConnect = require("./config/dbConnect");
 const app = express();
 const mainRoute = require("./routes/mainRoute")
-
+const cors = require("cors")
 app.use(express.json())
-
+app.use(cors())
 app.use('/api/user', mainRoute)
 
 
